@@ -1,4 +1,4 @@
-version : "3"
+version: "3"
 
 services:
   postgres_db:
@@ -7,9 +7,21 @@ services:
       - "5433:5432"
     networks:
       - backendNetwork
-  
+
   backend:
     container_name: "backend"
     ports:
       - "9000:9000"
-    
+    depends_on:
+      - postgres_db
+    networks:
+      - backendNetwork
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PROFILE=dev
+      - PORT=5432
+
+networks:
+  backendNetwork:
