@@ -17,7 +17,7 @@ pipeline {
         }
         stage("#3 docker generate image") {
             steps {
-                bat 'docker build --no-chache -t back .'
+                bat 'docker build --no-cache -t back  .'
             }
         }
         stage("#4 docker run image") {
