@@ -2,7 +2,7 @@ package br.com.stapassoli.taskBackendJenkins.service;
 
 import br.com.stapassoli.taskBackendJenkins.dto.TodoDTO;
 import br.com.stapassoli.taskBackendJenkins.entity.Todo;
-import br.com.stapassoli.taskBackendJenkins.repository.TodoRepository;
+import br.com.stapassoli.taskBackendJenkins.testcontainers.TodoRepository;
 import jakarta.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.Optional;

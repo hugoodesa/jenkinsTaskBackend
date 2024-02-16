@@ -25,7 +25,7 @@ public class TaskController {
     private final TodoService todoService;
 
     @PostMapping
-    public ResponseEntity<TodoDTO> createTodo(@RequestBody @Valid TodoDTO todoDTO) {
+    public ResponseEntity<TodoDTO> createTodo(@RequestBody TodoDTO todoDTO) {
         TodoDTO createdTodo = todoService.createTodo(todoDTO);
         return ResponseEntity.ok(createdTodo);
     }

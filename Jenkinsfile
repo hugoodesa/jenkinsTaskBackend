@@ -15,7 +15,7 @@ pipeline {
                 bat 'mvn test'
             }
         }
-        stage("#3 docker generate image") {
+        /* stage("#3 docker generate image") {
             steps {
                 bat 'docker build --no-cache -t back  .'
             }
@@ -23,6 +23,11 @@ pipeline {
         stage("#4 docker run image") {
             steps {
                 bat 'docker run --name back -e PROFILE=prod --rm -p 9000:9000 back'
+            }
+        } */
+        stage("#3 docker compose") {
+            steps {
+                bat 'docker-compose up --no-cache -t back  .'
             }
         }
     }

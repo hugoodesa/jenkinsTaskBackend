@@ -3,6 +3,7 @@ package br.com.stapassoli.taskBackendJenkins.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import java.time.LocalDateTime;
 import br.com.stapassoli.taskBackendJenkins.entity.Todo;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class TodoDTO {
 
     @NotNull
